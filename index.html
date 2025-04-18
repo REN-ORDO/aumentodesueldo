@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Aumento de Sueldo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="contenido-principal">
+                <h1>Calculadora de Aumento de Sueldo</h1>
+                <p>Ingrese su sueldo actual en $:</p>
+                <input type="number" id="sueldoInput" placeholder="Ej: 100000" />
+                <button onclick="calcularAumento()">Calcular Aumento</button>
+            </div>
+        </section>
+
+        <section>
+            <!-- Modal -->
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal">
+                    <h2>Resultado</h2>
+                    <p id="resultadoModal"></p>
+                    <button class="close-btn" onclick="cerrarModal()">Cerrar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <button onclick="toggleTabla()">Mostrar tabla de porcentajes</button>
+
+            <div id="tablaAumentos">
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Rango Sueldo ($)</th>
+                            <th>Porcentaje Aumento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 - 100.000</td>
+                            <td>13.8%</td>
+                        </tr>
+                        <tr>
+                            <td>100.001 - 150.000</td>
+                            <td>5.2%</td>
+                        </tr>
+                        <tr>
+                            <td>150.001 - 210.000</td>
+                            <td>14.1%</td>
+                        </tr>
+                        <tr>
+                            <td>210.001 - 300.000</td>
+                            <td>20.5%</td>
+                        </tr>
+                        <tr>
+                            <td>300.001 - 426.000</td>
+                            <td>16.5%</td>
+                        </tr>
+                        <tr>
+                            <td>426.001 - 550.000</td>
+                            <td>8.9%</td>
+                        </tr>
+                        <tr>
+                            <td>550.001 - 625.000</td>
+                            <td>5.1%</td>
+                        </tr>
+                        <tr>
+                            <td>625.001 - 852.000</td>
+                            <td>5.9%</td>
+                        </tr>
+                        <tr>
+                            <td>852.001 - 1.052.000</td>
+                            <td>3.2%</td>
+                        </tr>
+                        <tr>
+                            <td>1.052.001 - 1.252.000</td>
+                            <td>1.7%</td>
+                        </tr>
+                        <tr>
+                            <td>1.252.001 - 1.500.000</td>
+                            <td>1.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Más de 1.500.000</td>
+                            <td>3.6%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <script src="aumento.js"></script>
+    </main>
+</body>
+
+</html>
